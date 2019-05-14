@@ -2,11 +2,11 @@ import React from "react";
 
 class Titles extends React.Component {
 	render() {
-		return() {
+		return(
 			<div>
 				<h1>Sweater Weather</h1>
 			</div>
-		};
+		);
 	}
 }
 

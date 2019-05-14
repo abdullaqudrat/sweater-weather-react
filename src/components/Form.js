@@ -1,9 +1,11 @@
 import React from "react";
 
-class Form extends React.component {
+class Form extends React.Component {
   render() {
     return(
-      <div>Search Bar</div>
+      <div>
+        <h1>Search Bar</h1>
+      </div>
     );
   }
 };

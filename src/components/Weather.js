@@ -1,6 +1,6 @@
 import React from "react";
 
-class Weather extends React.component {
+class Weather extends React.Component {
   render() {
     return(
       <div>Weather Results</div>
