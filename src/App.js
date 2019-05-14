@@ -41,7 +41,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar getWeather={this.getWeather}/>
         <main style={{marginTop: "64px"}} />
         <Titles />
         <Form getWeather={this.getWeather}/>
