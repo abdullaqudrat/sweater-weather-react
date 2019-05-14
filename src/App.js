@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "./components/Navbar/Navbar";
 import Titles from "./components/Titles";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
@@ -40,6 +41,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <Navbar getWeather={this.getWeather}/>
+        <main style={{marginTop: "64px"}} />
         <Titles />
         <Form getWeather={this.getWeather}/>
         <Weather 
