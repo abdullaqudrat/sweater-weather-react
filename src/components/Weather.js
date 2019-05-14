@@ -1,17 +1,17 @@
 import React from "react";
 
-class Weather extends React.Component {
-  render() {
-    return(
-      <div>
-        { this.props.currentTemp && <p>Current Temperature: { this.props.currentTemp }</p> }
-        { this.props.city && <p>Location: { this.props.city }</p> }
-        { this.props.currentHumidity && <p>Current Humdity: { this.props.currentHumidity }</p> }
-        { this.props.currentSummary && <p>Current Summary: { this.props.currentSummary }</p> }
-        { this.props.error && <p>{ this.props.error }</p> }
-      </div>
-    );
-  }
-};
+// stateless functional component is used to render, when state is unnecessary. remove "this"(class-based) and render() and pass arg ("props") in const declaration
+// if an arrow function is returning 1 single element div, you can explicitly return by using parentheses
+// if an arrow funtion is using one arg, then arg doesnt need parentheses
+
+const Weather = props => (
+  <div>
+    { props.currentTemp && <p>Current Temperature: { props.currentTemp }</p> }
+    { props.city && <p>Location: { props.city }</p> }
+    { props.currentHumidity && <p>Current Humdity: { props.currentHumidity }</p> }
+    { props.currentSummary && <p>Current Summary: { props.currentSummary }</p> }
+    { props.error && <p>{ props.error }</p> }
+  </div>
+);
 
 export default Weather;
