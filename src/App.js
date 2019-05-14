@@ -3,6 +3,8 @@ import Titles from "./components/Titles";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
 
+// class-based components save state
+
 class App extends React.Component {
   state = {
     currentTemp: undefined,
