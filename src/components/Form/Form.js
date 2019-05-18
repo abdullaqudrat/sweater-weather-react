@@ -6,11 +6,12 @@ import "./Form.css"
 class Form extends React.Component {
   render() {
     return(
-      <div>
-        <p>Search for a city to get the weather forecast</p>
+      <div className="search">
+      <p className="search-title">SWEATER WEATHER</p>
+        <p className="search-title">Search for a city to get the weather forecast</p>
         <form onSubmit={this.props.getWeather}>
-        <input type="text" name="city" placeholder="Enter city here..."/>
-        <button>Get Forecast</button>
+        <input type="text" className="search-input" name="city" placeholder="Enter city here..."/>
+        <p><button className="search-button">Get Forecast</button></p>
         </form>
       </div>
     );
