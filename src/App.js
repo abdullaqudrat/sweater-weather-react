@@ -1,7 +1,7 @@
 import React from "react";
+import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import Titles from "./components/Titles";
-import Form from "./components/Form";
+import Form from "./components/Form/Form";
 import Weather from "./components/Weather";
 
 // class-based components save state
@@ -43,8 +43,7 @@ class App extends React.Component {
       <div>
         <Navbar getWeather={this.getWeather}/>
         <main style={{marginTop: "64px"}} />
-        <Titles />
-        <Form getWeather={this.getWeather}/>
+        <Form className="form" getWeather={this.getWeather}/>
         <Weather 
           currentTemp={this.state.currentTemp}
           city={this.state.city}
