@@ -28,7 +28,7 @@
 
 
 /*  */
-.navbar_navigation-search ul {
+.navbar_search {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -36,22 +36,16 @@
 }
 
 .nav_search_bar {
-  /* flex to none */
-  align-items: center;
-  height: 100%;
-  display: none;
-}
-
-.nav_search_bar input{
   width: 26vw;
   height: 3vh;
+  align-items: center;
   border-radius: 15px;
   font-size: 2vh;
   outline: none;
   margin-right: 10px;
 }
 
-.nav_search_bar button{
+.nav_search_button{
   width: 2rem;
   height: 2rem;
   border-radius: 15px;

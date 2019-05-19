@@ -7,12 +7,12 @@ const Navbar = props => (
       <div></div>
       <div className="navbar_title"><a href="/">SW</a></div>
       <div className="navbar_spacer" />
-      <div className="navbar_navigation-search" >
-        <form className="nav_search_bar" onSubmit={props.getWeather}>
-          <input type="text" name="city" placeholder="Enter city here..."/>
-          <button>Q</button>
+      <div className="navbar_search" >{ props.formVisible ? null :
+        <form onSubmit={props.getWeather}>
+          <input type="text" name="city" placeholder="Enter city here..." className="nav_search_bar"/>
+          <button className="nav_search_button">Q</button>
         </form>
-      </div>
+      }</div>
       <div className="navbar_spacer" />
       <div className="navbar_navigation-items" >
         <ul>
