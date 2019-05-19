@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Form from "./components/Form/Form";
-import Weather from "./components/Weather";
+import Weather from "./components/Weather/Weather";
 
 // class-based components save state
 
@@ -44,7 +44,6 @@ class App extends React.Component {
     return (
       <div>
         <Navbar getWeather={this.getWeather}/>
-        <main style={{marginTop: "64px"}} />
         { this.state.formVisible ? <Form className="form" getWeather={this.getWeather} /> : null } 
         <Weather 
           currentTemp={this.state.currentTemp}
