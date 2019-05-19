@@ -8,12 +8,10 @@ const Navbar = props => (
       <div className="navbar_title"><a href="/">SW</a></div>
       <div className="navbar_spacer" />
       <div className="navbar_navigation-search" >
-        <ul>
-          <form className="nav_search_bar" onSubmit={props.getWeather}>
-          <li><input type="text" name="city" placeholder="Enter city here..."/></li>
-          <li><button>Q</button></li>
+        <form className="nav_search_bar" onSubmit={props.getWeather}>
+          <input type="text" name="city" placeholder="Enter city here..."/>
+          <button>Q</button>
         </form>
-        </ul>
       </div>
       <div className="navbar_spacer" />
       <div className="navbar_navigation-items" >
