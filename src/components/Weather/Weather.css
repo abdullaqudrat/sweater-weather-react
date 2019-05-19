@@ -16,13 +16,15 @@
   font-size: 60px;
 }
 
-.current-summary {
+.current-icon {
+  text-align: center;
+  font-size: 60px;
+}
+
+.current-info {
   margin-left: 30px;
 }
 
-.current-humidity {
-  margin-left: 30px;
-}
 
 .error {
   color: red;

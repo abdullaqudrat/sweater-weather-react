@@ -12,6 +12,14 @@ class App extends React.Component {
     city: undefined,
     currentHumidity: undefined,
     currentSummary: undefined,
+    currentFeelsLike: undefined,
+    currentHigh: undefined,
+    currentLow: undefined,
+    currentDate: undefined,
+    currentTime: undefined,
+    currentUvIndex: undefined,
+    currentVisibitlity: undefined,
+    currentIcon: undefined,
     error: undefined,
     formVisible: true
   }
@@ -27,6 +35,14 @@ class App extends React.Component {
         city: results.data.attributes.location,
         currentHumidity: results.data.attributes.current_humidity,
         currentSummary: results.data.attributes.current_summary,
+        currentFeelsLike: results.data.attributes.current_feels_like,
+        currentHigh: results.data.attributes.current_high,
+        currentLow: results.data.attributes.current_low,
+        currentDate: results.data.attributes.current_date,
+        currentTime: results.data.attributes.current_time,
+        currentUvIndex: results.data.attributes.current_uv_index,
+        currentVisibitlity: results.data.attributes.current_visibility,
+        currentIcon: results.data.attributes.current_icon,
         error: "",
         formVisible: false
       });
@@ -36,6 +52,14 @@ class App extends React.Component {
         city: undefined,
         currentHumidity: undefined,
         currentSummary: undefined,
+        currentFeelsLike: undefined,
+        currentHigh: undefined,
+        currentLow: undefined,
+        currentDate: undefined,
+        currentTime: undefined,
+        currentUvIndex: undefined,
+        currentVisibitlity: undefined,
+        currentIcon: undefined,
         error: "Please enter a city.",
       });
     }
@@ -50,6 +74,14 @@ class App extends React.Component {
           city={this.state.city}
           currentHumidity={this.state.currentHumidity}
           currentSummary={this.state.currentSummary}
+          currentFeelsLike={this.state.currentFeelsLike}
+          currentHigh={this.state.currentHigh}
+          currentLow={this.state.currentLow}
+          currentDate={this.state.currentDate}
+          currentTime={this.state.currentTime}
+          currentUvIndex={this.state.currentUvIndex}
+          currentVisibitlity={this.state.currentVisibitlity}
+          currentIcon={this.state.currentIcon}
           error={this.state.error} 
         />
       </div> 
