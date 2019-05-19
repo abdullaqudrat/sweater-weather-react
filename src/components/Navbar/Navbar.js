@@ -9,7 +9,7 @@ const Navbar = props => (
       <div className="navbar_spacer" />
       <div className="navbar_search" >{ props.formVisible ? null :
         <form onSubmit={props.getWeather}>
-          <input type="text" name="city" placeholder="Enter city here..." className="nav_search_bar"/>
+          <input autoFocus type="text" name="city" placeholder="Enter city here..." className="nav_search_bar"/>
           <button className="nav_search_button">Q</button>
         </form>
       }</div>
