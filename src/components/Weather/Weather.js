@@ -18,6 +18,8 @@ const Weather = props => (
       <div className="current-high">{ props.currentHigh && <p>Current High: { Math.round(props.currentHigh) } &deg; F </p> }</div>
       <div className="current-low">{ props.currentLow && <p>Current Low: { Math.round(props.currentLow) } &deg; F </p> }</div>
       <div className="current-humidity">{ props.currentHumidity && <p>Current Humdity: { props.currentHumidity * 100 }%</p> }</div>
+      <div className="current-visibility">{ props.currentVisibility && <p>Current Visibility: { props.currentVisibility } miles</p> }</div>
+      <div className="current-uv-index">{ props.currentUvIndex && <p>UV Index: { props.currentUvIndex }</p> }</div>
     </div>
     <div className="error">{ props.error && <p>{ props.error }</p> }</div>
   </div>

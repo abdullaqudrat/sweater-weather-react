@@ -18,7 +18,7 @@ class App extends React.Component {
     currentDate: undefined,
     currentTime: undefined,
     currentUvIndex: undefined,
-    currentVisibitlity: undefined,
+    currentVisibility: undefined,
     currentIcon: undefined,
     error: undefined,
     formVisible: true
@@ -41,7 +41,7 @@ class App extends React.Component {
         currentDate: results.data.attributes.current_date,
         currentTime: results.data.attributes.current_time,
         currentUvIndex: results.data.attributes.current_uv_index,
-        currentVisibitlity: results.data.attributes.current_visibility,
+        currentVisibility: results.data.attributes.current_visibility,
         currentIcon: results.data.attributes.current_icon,
         error: "",
         formVisible: false
@@ -58,7 +58,7 @@ class App extends React.Component {
         currentDate: undefined,
         currentTime: undefined,
         currentUvIndex: undefined,
-        currentVisibitlity: undefined,
+        currentVisibility: undefined,
         currentIcon: undefined,
         error: "Please enter a city.",
       });
@@ -80,7 +80,7 @@ class App extends React.Component {
           currentDate={this.state.currentDate}
           currentTime={this.state.currentTime}
           currentUvIndex={this.state.currentUvIndex}
-          currentVisibitlity={this.state.currentVisibitlity}
+          currentVisibility={this.state.currentVisibility}
           currentIcon={this.state.currentIcon}
           error={this.state.error} 
         />
