@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Form from "./components/Form/Form";
-import Weather from "./components/Weather";
+import Weather from "./components/Weather/Weather";
 
 // class-based components save state
 
@@ -12,7 +12,16 @@ class App extends React.Component {
     city: undefined,
     currentHumidity: undefined,
     currentSummary: undefined,
-    error: undefined
+    currentFeelsLike: undefined,
+    currentHigh: undefined,
+    currentLow: undefined,
+    currentDate: undefined,
+    currentTime: undefined,
+    currentUvIndex: undefined,
+    currentVisibility: undefined,
+    currentIcon: undefined,
+    error: undefined,
+    formVisible: true
   }
   getWeather = async (e) => {
     e.preventDefault()
@@ -26,7 +35,16 @@ class App extends React.Component {
         city: results.data.attributes.location,
         currentHumidity: results.data.attributes.current_humidity,
         currentSummary: results.data.attributes.current_summary,
-        error: ""
+        currentFeelsLike: results.data.attributes.current_feels_like,
+        currentHigh: results.data.attributes.current_high,
+        currentLow: results.data.attributes.current_low,
+        currentDate: results.data.attributes.current_date,
+        currentTime: results.data.attributes.current_time,
+        currentUvIndex: results.data.attributes.current_uv_index,
+        currentVisibility: results.data.attributes.current_visibility,
+        currentIcon: results.data.attributes.current_icon,
+        error: "",
+        formVisible: false
       });
     } else {
       this.setState({
@@ -34,7 +52,15 @@ class App extends React.Component {
         city: undefined,
         currentHumidity: undefined,
         currentSummary: undefined,
-        error: "Please enter a city."
+        currentFeelsLike: undefined,
+        currentHigh: undefined,
+        currentLow: undefined,
+        currentDate: undefined,
+        currentTime: undefined,
+        currentUvIndex: undefined,
+        currentVisibility: undefined,
+        currentIcon: undefined,
+        error: "Please enter a city.",
       });
     }
   }
@@ -42,13 +68,20 @@ class App extends React.Component {
     return (
       <div>
         <Navbar getWeather={this.getWeather}/>
-        <main style={{marginTop: "64px"}} />
-        <Form className="form" getWeather={this.getWeather}/>
+        { this.state.formVisible ? <Form className="form" getWeather={this.getWeather} /> : null } 
         <Weather 
           currentTemp={this.state.currentTemp}
           city={this.state.city}
           currentHumidity={this.state.currentHumidity}
           currentSummary={this.state.currentSummary}
+          currentFeelsLike={this.state.currentFeelsLike}
+          currentHigh={this.state.currentHigh}
+          currentLow={this.state.currentLow}
+          currentDate={this.state.currentDate}
+          currentTime={this.state.currentTime}
+          currentUvIndex={this.state.currentUvIndex}
+          currentVisibility={this.state.currentVisibility}
+          currentIcon={this.state.currentIcon}
           error={this.state.error} 
         />
       </div> 
