@@ -12,7 +12,8 @@ class App extends React.Component {
     city: undefined,
     currentHumidity: undefined,
     currentSummary: undefined,
-    error: undefined
+    error: undefined,
+    formVisible: true
   }
   getWeather = async (e) => {
     e.preventDefault()
@@ -26,7 +27,8 @@ class App extends React.Component {
         city: results.data.attributes.location,
         currentHumidity: results.data.attributes.current_humidity,
         currentSummary: results.data.attributes.current_summary,
-        error: ""
+        error: "",
+        formVisible: false
       });
     } else {
       this.setState({
@@ -34,7 +36,7 @@ class App extends React.Component {
         city: undefined,
         currentHumidity: undefined,
         currentSummary: undefined,
-        error: "Please enter a city."
+        error: "Please enter a city.",
       });
     }
   }
@@ -43,7 +45,7 @@ class App extends React.Component {
       <div>
         <Navbar getWeather={this.getWeather}/>
         <main style={{marginTop: "64px"}} />
-        <Form className="form" getWeather={this.getWeather}/>
+        { this.state.formVisible ? <Form className="form" getWeather={this.getWeather} /> : null } 
         <Weather 
           currentTemp={this.state.currentTemp}
           city={this.state.city}
