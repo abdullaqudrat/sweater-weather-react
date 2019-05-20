@@ -67,7 +67,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Navbar getWeather={this.getWeather}/>
+        <Navbar formVisible={this.state.formVisible} getWeather={this.getWeather}/>
         { this.state.formVisible ? <Form className="form" getWeather={this.getWeather} /> : null } 
         <Weather 
           currentTemp={this.state.currentTemp}
