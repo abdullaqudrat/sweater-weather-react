@@ -83,7 +83,12 @@
     font-size: 2vh;
     margin-right: 10px;
   }
-  
+  .nav_search_button{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 25px;
+    vertical-align: 3px;
+  }
 }
 
 @media screen and (min-width: 850px) {
@@ -101,5 +106,11 @@
     height: 4vh;
     font-size: 3vh;
     margin-right: 10px;
+  }
+  .nav_search_button{
+    width: 3rem;
+    height: 3rem;
+    vertical-align: 5px;
+    border-radius: 35px;
   }
 }
