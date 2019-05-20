@@ -19,7 +19,7 @@
 .navbar_title a {
   color: white;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .navbar_spacer {
@@ -66,4 +66,40 @@
 
 .navbar_navigation-items li {
   padding: 0 0.5rem;
+}
+
+@media screen and (min-width: 500px) {
+  .navbar {
+    width: 100%;
+    height: 75px;
+  }
+  .navbar_title a {
+    font-size: 2.5rem;
+  }
+  .nav_search_bar {
+    border-radius: 20px; 
+    width: 30vw;
+    height: 3.5vh;
+    font-size: 2vh;
+    margin-right: 10px;
+  }
+  
+}
+
+@media screen and (min-width: 850px) {
+  .navbar {
+    width: 100%;
+    height: 85px;
+  }
+  .navbar_title a.sw-yes::after {
+    content: "EATER WEATHER";
+    font-size: 2.5rem;
+  }
+  .nav_search_bar {
+    border-radius: 25px; 
+    width: 32vw;
+    height: 4vh;
+    font-size: 3vh;
+    margin-right: 10px;
+  }
 }

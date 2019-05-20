@@ -5,7 +5,7 @@ const Navbar = props => (
   <header className="navbar">
     <nav className="navbar__navigation">
       <div></div>
-      <div className="navbar_title"><a href="/">SW</a></div>
+<div className="navbar_title">{ props.formVisible ? <a className="sw-no" href="/">SWEATER WEATHER</a> :<a className="sw-yes" href="/">SW</a>}</div>
       <div className="navbar_spacer" />
       <div className="navbar_search" >{ props.formVisible ? null :
         <form onSubmit={props.getWeather}>
